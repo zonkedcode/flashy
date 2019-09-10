@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello Flashy</title>
+	<link rel="stylesheet" type="text/css" href="../css/flashy.css">
+	<style type="text/css">
+		li button {
+			padding: 10px;
+			background: transparent;
+			border: 1px solid #ddd;
+			border-radius: 2px;
+			font-size: 15px;
+		}
+
+		ul li{
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="flashy_demo">
+		<h1>Demo flashy</h1>
+		<p>
+			<ul>
+				<li>
+					<button class="flashy__success">To click with flashy__success</button>
+				</li>
+				<li>	
+					<button class="flashy__danger">To click with flashy__danger</button>					
+				</li>
+				<li>	
+					<button class="flashy__warning">To click with flashy__warning</button>					
+				</li>
+			</ul>
+		</p>
+	</div>
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="../js/flashy.js"></script>
+
+	<script type="text/javascript">
+		$('[class=flashy__success]').click(function() {
+			flashy('Flasher your users with flashy', {
+				type : 'flashy__success'
+			});
+		});
+
+		$('[class=flashy__danger]').click(function() {
+			flashy('Flasher your users with flashy', {
+				type : 'flashy__danger'
+			});
+		});
+
+		$('[class=flashy__warning]').click(function() {
+			var d = flashy('Flasher your users with flashy', {
+				type : 'flashy__warning',
+				stop : true
+			});
+		});
+	</script>
+</body>
+</html>

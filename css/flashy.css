@@ -172,8 +172,7 @@
 }
 
 .flashy .flashy__body {
-   display: table-cell;
-   vertical-align: middle;    
+    float: left;   
 }
 
 .flashy .flashy__container{
@@ -181,26 +180,27 @@
     width: 100%;
 }
 
-.flashy .flashy__icon{
-    display: table-cell;
-    vertical-align: middle;
-    width: 10%;
-    text-align: center;
+.flashy__button {
+    background: transparent;
+    border: none;
+    float: right;
+    margin: 0px 9px;
+    font-size: 12px;
+    outline: none;
 }
 
-@media only screen and (max-width:500px) {
-   
-    .flashy__width__300{
-        width: 95%!important;
+.flashy .flashy__icon{
+    text-align: center;
+    float: right;
+}
+
+@media only screen and (max-width:500px) {   
+    .flashy{
+        bottom: 9px!important;
+        width: 90%!important;
     }
 }
 
 .flashy__width__300{
     max-width: 400px;
-}
-
-.flashy__body i {
-    float: right;
-    margin: 0px 9px;
-    font-size: 12px;
 }
