@@ -1,6 +1,6 @@
 ## flashy.js jQuery plugin
 
-> The package requires jQuery in your html document.
+> The package require jQuery in your html document.
 
 ```html
 <html>
@@ -13,7 +13,7 @@
 </html>
 ```
 
-### Start by first cloning the ** Githud ** project in your application.
+### Start by first cloning the ** Github ** project in your application.
 
 once downloaded you must include the following files:
 
