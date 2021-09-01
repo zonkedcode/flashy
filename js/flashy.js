@@ -1,6 +1,6 @@
 /*!
  * flashy.js
- * Version: 0.4.0
+ * Version: 0.5.0
  *
  * With flashy flash for subscribers calmly
  * ----------------------------------------
@@ -53,7 +53,7 @@
 
 
 
-	Flashy.Version = "0.4.0";
+	Flashy.Version = "0.5.0";
 
 	Flashy.OPTIONS = {
 		title : "Hello flashy !",
@@ -74,7 +74,7 @@
 	 * The body of the package inserted into the DOM.
 	 */
 	Flashy.NODE_PRESENT = function() {
-		$('body').append('<div class="flashy" flashy id="flashy"><div class="flashy__container"><div class="flashy__body"></div><div class="flashy__icon"></div></div></div>');
+		$('body').append('<div class="flashy" aria-flashy="true" id="flashy"><div class="flashy__container"><div class="flashy__body"></div><div class="flashy__icon"><button class="flashy__button"></button></div></div></div>');
 	}();
 
 	Flashy.ClassName = { 
@@ -83,6 +83,7 @@
 		iconClass : ".flashy__icon",
 		hideClass : ".flashy__hide",
 		display : ".flashy__show",
+		btnClass : ".flashy__button",
 		iconChild : ".flashy__icon i",
 		activeClass : ".flashy__active",
 		active : "flashy__active"
@@ -94,7 +95,7 @@
 			.OptionPreliminary();
 
 		$(this.ClassName.bodyClass).html(Flashy.OPTIONS_COPY.title);
-		$(this.ClassName.iconClass).html(Flashy.OPTIONS_COPY.icon);
+		$(this.ClassName.btnClass).html(Flashy.OPTIONS_COPY.icon);
 
 		$(this.ClassName.coreClass)
 
@@ -147,6 +148,7 @@
 	}; 
 
 	function StringifyOptions() {
+		Flashy.Hide()
 		Flashy.OPTIONS_COPY = JSON.parse(JSON.stringify(Flashy.OPTIONS));
 	}
 
@@ -229,7 +231,7 @@
 	}
 
 	Flashy.Quit = function() {
-		$(document).on('click', Flashy.ClassName.iconChild, function(e) {
+		$(document).on('click', Flashy.ClassName.btnClass, function(e) {
 			Flashy.Out();
 		});
 
@@ -242,7 +244,7 @@
 		} 
 	}
 
-	var Plugin = function(title, params, $callBack){
+	var Plugin = function (title, params, $callBack) {
 
 		if (typeof title == "undefined" && typeof params == "undefined" && typeof $callBack == "undefined") {
 			throw new Error("you must specify at least a parameter");
@@ -274,7 +276,7 @@
 		Flashy
 			.Show()
 			.KeyUp()
-			.Quit();			
+			.Quit();	
 	}
 
 	return Plugin;

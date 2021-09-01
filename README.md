@@ -1,6 +1,10 @@
 ## flashy.js jQuery plugin
 
-> The package require jQuery in your html document.
+<div>
+	<img src="https://i.imgur.com/yRVwyGf.gif" title="source: imgur.com"/>
+</div>
+
+> The package requires jQuery in your html document.
 
 ```html
 <html>
