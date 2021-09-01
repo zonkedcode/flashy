@@ -17,7 +17,7 @@
 </html>
 ```
 
-### Start by first cloning the ** Githud ** project in your application.
+### Start by first cloning the ** Github ** project in your application.
 
 once downloaded you must include the following files:
 
